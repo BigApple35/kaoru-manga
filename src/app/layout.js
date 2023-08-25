@@ -1,6 +1,8 @@
+
+
 import './globals.css'
 import { Inter } from 'next/font/google'
-
+import  Bar  from '@/components/index components/bar'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -9,9 +11,13 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} overflow-x-hidden scrollbar-thin scrollbar-track-slate-200 scrollbar-thumb-prim-black scrollbar-rounded-full`}>
+        <main className='mt-20 '>{children}</main>
+      </body>
     </html>
   )
 }
